@@ -12,6 +12,7 @@ window.onload = function() {
 
 function generateRandomCard() {
   const icons = [
+    // Left my previous code as reference of what I was trying to do with icons...lol
     // {
     //   name: "hearts",
     //   image: "/workspaces/Andyalpa-pt72-RandomCard/src/assets/img/hearts.png"
