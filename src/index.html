@@ -14,16 +14,19 @@
   </head>
   <body>
     <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+      <div class="myRandomCard mt-5">
+        <div class="card-icon">
+          <h1 id="topleft">♥</h1>
+        </div>
+        <h1 class="randomCardValue">1</h1>
+        <div class="card-icon">
+          <h1 id="bottomright">♥</h1>
+        </div>
       </div>
+      <progress value="0" max="10" id="progressBar" class="mt-2"></progress>
+      <button class="btn btn-primary m-3" ">
+        Generate Card
+      </button>
     </div>
   </body>
 </html>

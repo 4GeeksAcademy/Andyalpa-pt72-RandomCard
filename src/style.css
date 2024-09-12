@@ -1,1 +1,47 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  background: rgb(37, 37, 37);
+}
+
+.container-fluid {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.myRandomCard {
+  display: flex;
+  width: 500px;
+  height: 700px;
+  background: white;
+  border-radius: 20px;
+  justify-items: stretch;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 0 30px 20px #535353;
+}
+
+.card-icon img {
+  width: 80px;
+}
+
+#topleft {
+  font-size: 121px;
+  color: red;
+  position: relative;
+  right: 190px;
+  margin-top: -20px;
+}
+
+#bottomright {
+  font-size: 121px;
+  position: relative;
+  left: 190px;
+  margin-bottom: 0;
+}
+
+.randomCardValue {
+  font-size: 8rem;
+}
