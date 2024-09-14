@@ -10,6 +10,8 @@ window.onload = function() {
   generateRandomCard();
 };
 
+let countdownInterval;
+
 function generateRandomCard() {
   const icons = [
     // Left my previous code as reference of what I was trying to do with icons...lol
@@ -45,13 +47,40 @@ function generateRandomCard() {
 
   cardIcons.forEach(cardIcon => {
     cardIcon.innerHTML = icons[icon];
+    if (icons[icon] === "♥" || icons[icon] === "♦") {
+      cardIcon.style.color = "red";
+    } else {
+      cardIcon.style.color = "black";
+    }
   });
+
+  const randomCardValue = document.querySelector(".randomCardValue");
+  if (icons[icon] === "♥" || icons[icon] === "♦") {
+    randomCardValue.style.color = "red";
+  } else {
+    randomCardValue.style.color = "black";
+  }
 
   console.log(icons[icon], numbers[number]);
 }
 
-document.querySelector(".btn").addEventListener("click", function() {
+const btn = document.querySelector(".btn");
+const myRandomCard = document.querySelector(".myRandomCard");
+
+btn.addEventListener("click", function() {
+  // Add the animation class
+  myRandomCard.classList.add("animate__animated", "animate__headShake");
+
+  // Clear the interval and generate a new card
+  clearInterval(countdownInterval);
   generateRandomCard();
+  startTimer();
+});
+
+// Listen for the animation to end
+myRandomCard.addEventListener("animationend", function() {
+  // Remove the animation class
+  myRandomCard.classList.remove("animate__animated", "animate__headShake");
 });
 
 function startTimer() {
@@ -68,7 +97,7 @@ function startTimer() {
 
   updateProgressBar();
 
-  setInterval(updateProgressBar, 1000);
+  countdownInterval = setInterval(updateProgressBar, 1000);
 }
 
 startTimer();

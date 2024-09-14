@@ -1,7 +1,16 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+@import "https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css";
 
 body {
   background: rgb(37, 37, 37);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#progressBar {
+  transition: width 0.4s ease;
 }
 
 .container-fluid {
@@ -21,6 +30,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   box-shadow: 0 0 30px 20px #535353;
+  transition: width 0.4s ease;
 }
 
 .card-icon img {

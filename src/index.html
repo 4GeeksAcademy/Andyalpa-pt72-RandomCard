@@ -10,20 +10,27 @@
       integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
       crossorigin="anonymous"
     />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <link rel="shortcut icon" href="./4geeks.ico" />
   </head>
   <body>
     <div class="container-fluid text-center">
-      <div class="myRandomCard mt-5">
+      <div class="myRandomCard mt-5 animate__animated animate__headShake">
         <div class="card-icon">
           <h1 id="topleft">♥</h1>
         </div>
         <h1 class="randomCardValue">1</h1>
         <div class="card-icon">
-          <h1 id="bottomright">♥</h1>
+          <h1 id="bottomright" style="color: red;">♥</h1>
         </div>
       </div>
-      <progress value="0" max="10" id="progressBar" class="mt-2"></progress>
+
+     
+
+      <progress value="0" max="10" id="progressBar" class="progress is-small is-primary mt-2"></progress>
       <button class="btn btn-primary m-3" ">
         Generate Card
       </button>
